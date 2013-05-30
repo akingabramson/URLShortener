@@ -29,6 +29,11 @@ gem 'jbuilder', '~> 1.0.1'
 
 gem 'pry-rails'
 
+gem 'protected_attributes'
+
+# Opens web pages
+gem 'launchy'
+
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.
   gem 'sdoc', require: false

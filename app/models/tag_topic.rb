@@ -4,4 +4,8 @@ class TagTopic < ActiveRecord::Base
 
   has_many :tags
   has_many :short_urls, :through => :tags
+
+  def most_popular_link
+    self.short_urls.sort_by {|short_url| short_url.uniques_count}.last
+  end
 end
