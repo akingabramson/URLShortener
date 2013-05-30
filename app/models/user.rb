@@ -29,7 +29,7 @@ class User < ActiveRecord::Base
   end
 
   def visit_link(short_url)
-    ShortUrl.where(:short_url = short_url).visit(self.id)
+    ShortUrl.where(:short_url => short_url).first.visit(self.id)
   end
 
 end
